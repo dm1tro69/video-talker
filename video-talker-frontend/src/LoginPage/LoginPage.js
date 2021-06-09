@@ -6,6 +6,7 @@ import logo from '../../src/resurces/logo.png'
 import './LoginPage.css'
 import UsernameInput from "./components/UsernameInput";
 import SubmitButton from "./components/SubmitButton";
+import {registerNewUser} from "../utils/wssConnection/wssConnection";
 
 const LoginPage = () => {
     const [username, setUsername] = useState('')
@@ -13,8 +14,10 @@ const LoginPage = () => {
     const dispatch = useDispatch();
 
     const handleSubmitButtonPress = () => {
-        history.push('/dashboard')
+        registerNewUser(username)
         dispatch(setUserName(username))
+        history.push('/dashboard')
+
     }
     return (
         <div className={'login-page_container background_main_color'}>
