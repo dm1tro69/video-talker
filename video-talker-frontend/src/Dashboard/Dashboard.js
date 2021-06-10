@@ -5,6 +5,7 @@ import logo from '../../src/resurces/logo.png';
 
 import './Dashboard.css';
 import ActiveUsersList from "../LoginPage/components/ActiveUsersList/ActiveUsersList";
+import DirectCall from "./components/DirectCall/DirectCall";
 
 const Dashboard = () => {
     useEffect(()=> {
@@ -14,7 +15,7 @@ const Dashboard = () => {
         <div className='dashboard_container background_main_color'>
             <div className='dashboard_left_section'>
                 <div className='dashboard_content_container'>
-                    content
+                    <DirectCall/>
                 </div>
                 <div className='dashboard_rooms_container background_secondary_color'>
                     rooms
