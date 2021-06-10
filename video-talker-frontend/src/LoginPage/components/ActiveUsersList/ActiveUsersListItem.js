@@ -1,10 +1,11 @@
 import React from 'react'
 import userAvatar from '../../../../src/resurces/userAvatar.png'
+import {callToOtherUser} from "../../../utils/webRTC/webRTCHandler";
 
 const ActiveUsersListItem = ({activeUser}) => {
 
     const handleListItemPressed = () => {
-
+        callToOtherUser(activeUser)
     }
 
     return (
